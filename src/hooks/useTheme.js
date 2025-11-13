@@ -1,5 +1,5 @@
 // src/hooks/useTheme.js
-import { useState, useEffect } from 'react';
+import {  useEffect } from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
 export const useTheme = () => {
