@@ -1,0 +1,90 @@
+ /* Additional CSS for enhanced features */
+
+.header-title p {
+  color: #6b7280;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.summary-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.search-filter {
+  flex: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.clear-button {
+  padding: 10px 15px;
+  background: var(--danger-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.clear-button:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.clear-button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Animation for new items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.expense-item {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Print styles */
+@media print {
+  .theme-toggle,
+  .clear-button,
+  .delete-button,
+  .add-button {
+    display: none !important;
+  }
+  
+  .expense-form-card {
+    display: none !important;
+  }
+}
